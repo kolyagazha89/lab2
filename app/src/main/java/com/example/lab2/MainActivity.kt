@@ -52,8 +52,12 @@ class MainActivity : AppCompatActivity() {
                 text_itog.setText("Линейное\nx = ${roundToStr(x)}")
                 return true
             }
-            if (a==0 && b==0){
+            if (a==0 && b==0 && c!=0){
                 text_itog.setText("Не является уравнением")
+                return true
+            }
+            if (a==0 && b==0 && c==0){
+                text_itog.setText("Не является уравнением и принимает верное равенство")
                 return true
             }
             return false
